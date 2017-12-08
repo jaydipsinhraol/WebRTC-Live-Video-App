@@ -37,6 +37,11 @@ app.use('/', function (req,res) {
 var channels = {};
 var sockets = {};
 
+io.configure(function () {
+  io.set("transports", ["xhr-polling"]);
+  io.set("polling duration", 10);
+});
+
 
 io.sockets.on('connection', function (socket) {
     socket.channels = {};
