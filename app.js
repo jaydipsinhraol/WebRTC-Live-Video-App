@@ -13,7 +13,8 @@ var app = express();
 var server = http.createServer(app);
 var io  = require('socket.io').listen(server);
 
-server.listen(3000);
+server.listen(process.env.PORT || 3000)
+
 server.on('listening', function () {
   console.log("server is up")
 });
