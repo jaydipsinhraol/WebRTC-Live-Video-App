@@ -39,8 +39,6 @@ var channels = {};
 var sockets = {};
 
 
-io.set('transports', ['flashsocket', 'xhr-polling']);
-
 io.sockets.on('connection', function (socket) {
     socket.channels = {};
     sockets[socket.id] = socket;
