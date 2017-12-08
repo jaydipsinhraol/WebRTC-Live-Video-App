@@ -1,7 +1,10 @@
 <!doctype html>
 <html>
     <head>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script
+src="https://code.jquery.com/jquery-1.12.4.min.js"
+integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+crossorigin="anonymous"></script>
         <!-- This adapter.js file de-prefixes the webkit* and moz* prefixed RTC
              methods. When RTC becomes a more solid standard, this adapter should no
              longer be necessary. -->
@@ -42,7 +45,7 @@
 
             function init() {
                 console.log("Connecting to signaling server");
-                signaling_socket = io(SIGNALING_SERVER);
+                //signaling_socket = io(SIGNALING_SERVER);
                 signaling_socket = io();
 
                 signaling_socket.on('connect', function() {
